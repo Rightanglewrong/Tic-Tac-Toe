@@ -1,0 +1,48 @@
+.grid {
+  padding: 5px;
+  border: 5px solid black;
+  cursor: pointer;
+}
+#board {
+  position: relative;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 33% 33% 33%;
+  height: 500px;
+  width: 500px;
+  margin: 0 auto;
+}
+body {
+  background-color: beige;
+}
+h1 {
+  font-size: 90px;
+  text-align: center;
+}
+#playerOne {
+  position: fixed;
+  left: 20%;
+}
+#playerTwo {
+  position: fixed;
+  right: 20%;
+}
+h3 {
+    text-align: center;
+}
+p {
+  text-align: center;
+  border: 10px solid purple;
+  border-radius: 50%;
+  max-width: 100px;
+}
+.buttons {
+  text-align: center;
+}
+.x {
+    color: black;
+}
+.o {
+    color: red;
+}

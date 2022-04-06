@@ -1,3 +1,10 @@
+body {
+  display: grid;
+  background-color: beige;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 2fr 100px;
+}
 .grid {
   padding: 5px;
   border: 5px solid black;
@@ -9,27 +16,24 @@
   grid-gap: 5px;
   grid-template-columns: 33% 33% 33%;
   grid-template-rows: 33% 33% 33%;
-  height: 500px;
-  width: 500px;
+  height: 300px;
+  width: 300px;
   margin: 0 auto;
 }
-body {
-  background-color: beige;
-}
+
 h1 {
   font-size: 90px;
   text-align: center;
+  grid-column: 1 / 4;
 }
-#playerOne {
-  position: fixed;
-  left: 20%;
-}
-#playerTwo {
-  position: fixed;
-  right: 20%;
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 h3 {
-    text-align: center;
+  text-align: center;
 }
 p {
   text-align: center;
@@ -37,12 +41,16 @@ p {
   border-radius: 50%;
   max-width: 100px;
 }
-.buttons {
+.button {
+  padding: 20px;
   text-align: center;
+  grid-column-start: 2;
 }
 .x {
-    color: black;
+  background-image: url(https://www.onlygfx.com/wp-content/uploads/2018/07/8-grunge-x-3-857x1024.png);
+  background-size: cover;
 }
 .o {
-    color: red;
+  background-image: url(https://www.picng.com/upload/letter_o/png_letter_o_51830.png);
+  background-size: cover;
 }

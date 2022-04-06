@@ -7,6 +7,7 @@ const displayStatusEl = document.querySelector("#status");
 const players = [1, null, 2];
 const playerIdxX = players[0];
 const playerIdxO = players[2];
+
 let currentPlayer = null;
 let turn = 1;
 
@@ -30,7 +31,7 @@ resetButtonEl.addEventListener("click", resetBoard);
 //Functions
 
 function playGame() {
-  possPosEls.values = null;
+  board = possPosEls.values = null;
   currentPlayer = playerIdxX;
   possPosEls.forEach(function (pos) {
     pos.addEventListener("click", choiceMade);
@@ -44,6 +45,7 @@ function choiceMade(e) {
   if (tile.value !== "" && currentPlayer === playerIdxX) {
     tile.classList.add("x");
     currentPlayer = playerIdxO;
+    board.push("tile.value");
     displayStatusEl.textContent = `Turn ${turn}. It is now PLAYER${currentPlayer}'s turn!`;
   } else if (tile.value !== "" && currentPlayer === playerIdxO) {
     tile.classList.add("o");
